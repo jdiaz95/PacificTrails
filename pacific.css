@@ -1,0 +1,211 @@
+
+* {box-sizing: border-box;}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAEAEA;
+    color: #666666;
+}
+
+header {background-color : #002171;
+    background-position: right;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    text-align: center;
+}
+header a {
+    text-decoration: none;
+}
+header a:link {
+    color: #FFFFFF;
+}
+header a:visited {
+    color: #FFFFFF;
+}
+header a:hover{
+    color: #90C7E3;
+}
+
+h1 	{margin-bottom: 0;
+    margin-top: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 0.25em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+nav {
+    font-weight: bold;
+    padding: 0;
+    font-size: 120%;
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+nav li {
+    border-bottom: 1px solid darkblue;
+}
+nav a { text-decoration: none;}
+nav a:link { color: #5C7FA3;}
+nav a:visited {color: #344873;}
+nav a:hover {color: #A52A2A;
+            transition: 3s ease-out}
+
+
+#homehero {height: 300px;
+    background-image: url("coast2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#yurthero{height: 300px;
+    background-image: url("yurt.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#trailhero {height: 300px;
+    background-image: url("trail.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+main {
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-left: 30px;
+    display: block;
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+
+main ul { list-style-image:
+        url(marker.gif);
+}
+
+h2 {
+    color: #1976d3;
+    font-family: Georgia, "Times New Roman", serif;
+    text-shadow: 1px 1px #CCCCCC;
+}
+
+h3 {
+    color: #000033;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+dt 	{color: #002171; }
+
+
+.resort {color: #1976d3;
+    font-weight: bold;}
+
+#wrapper {background-color: #90C7E3;
+    background-image: linear-gradient(to bottom, #FFFFFF,#90C7E3);
+    position: center;
+}
+
+footer { font-size: 75%;
+    text-align: center;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    padding: 2em;
+    background-color: #FFFFFF;
+}
+
+#contact {font-size:90% ;}
+table {
+    border: 2px solid #3399CC;
+    border-collapse: collapse;
+}
+ td, th{
+    padding: 0.5em;
+    border: 2px solid #3399CC;
+}
+td {
+    text-align: center;
+}
+.text{
+    text-align: left;
+}
+tr:nth-of-type(odd){
+    background-color: #F5FAFC;
+}
+tr:nth-of-type(even){
+    background-color: #FFFFFF;
+}
+form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+input, textarea {
+    margin-bottom: .5em;
+}
+input [type="submit"]{
+    grid-column: 2;
+    width: 9em;
+}
+video, embed {
+    float: right;
+    padding-left: 20px;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-flow: nowrap;
+        justify-content: space-around;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    section {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .content main{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;}
+    h2 { grid-row:1/2;
+        grid-column: 1/5;}
+    section{ grid-row:2/3;
+        grid-column: auto;}
+    #special{grid-row: auto;
+        grid-column: 1/5;}
+    footer{grid-row: auto;
+        grid-column: 1/5;}
+    form{ width: 60%;
+        display: grid;
+        grid-gap: 1em;
+        column-count: 2;
+        grid-template-columns: 6em 1fr;
+        grid-template-rows: auto;}
+
+}
+@media (min-width: 1024px) {
+    nav ul{flex-direction: column;
+        padding-top: 1em;}
+    nav{text-align: left;
+        padding-left: 1em;}
+    #wrapper{margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #000033;
+        box-shadow: 2px 2px;
+        display: grid;}
+    header{grid-row: auto;
+        grid-column: 1/3;}
+    nav{grid-row: auto;
+        grid-column: 1/2;}
+    main{grid-row:auto; grid-column: 2/3 }
+    footer{grid-row: auto; grid-column: 2/3;}
+}
+
